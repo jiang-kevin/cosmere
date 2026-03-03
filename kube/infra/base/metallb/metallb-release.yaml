@@ -13,7 +13,7 @@ spec:
         kind: HelmRepository
         name: metallb
       valuesFiles:
-        - metallb-values.yaml
+        - ./metallb-values.yaml
   interval: 60m
   install:
     remediation:
