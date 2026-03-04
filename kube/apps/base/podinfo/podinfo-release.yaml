@@ -31,4 +31,5 @@ spec:
                 value: /
           backendRefs:
             - name: podinfo
-              port: 80
+              namespace: default
+              port: 9898
