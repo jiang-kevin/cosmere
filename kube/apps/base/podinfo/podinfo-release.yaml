@@ -18,6 +18,10 @@ spec:
     replicaCount: 1
     httpRoute:
       enabled: true
+      parentRefs:
+        - name: traefik
+          sectionName: http
+          kind: Gateway
       hostnames:
         - podinfo.smc.monachrom.net
       rules:
