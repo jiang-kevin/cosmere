@@ -23,7 +23,7 @@ spec:
           sectionName: http
           kind: Gateway
       hostnames:
-        - podinfo.smc.monachrom.net
+        - podinfo.smr.monachrom.net
       rules:
         - matches:
             - path:
