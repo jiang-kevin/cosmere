@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - cilium-lb-ip-pool.yaml
 - cilium-l2announcement.yaml
+- cilium-gateway.yaml
