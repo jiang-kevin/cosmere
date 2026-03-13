@@ -29,3 +29,16 @@ kubectl apply --server-side -f https://github.com/kubernetes-sigs/gateway-api/re
 ```sh
 cilium install -f kube/bootstrap/shadesmar/cilium-values.yaml
 ```
+
+7. Install and bootstrap FluxCD
+
+```sh
+flux bootstrap github \
+  --token-auth \
+  --owner=jiang-kevin \
+  --repository=cosmere \
+  --branch=main \
+  --path=kube/clusters/shadesmar \
+  --personal \
+  --private=false
+```
