@@ -19,7 +19,7 @@ spec:
     httpRoute:
       enabled: true
       parentRefs:
-        - name: traefik
+        - name: gw-private
           sectionName: http
           kind: Gateway
       hostnames:
