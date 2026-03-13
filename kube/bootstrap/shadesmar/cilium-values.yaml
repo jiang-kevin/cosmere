@@ -3,7 +3,6 @@ ipam:
 kubeProxyReplacement: true
 l2announcements:
   enabled: true
-devices: {eth0, net0}
 externalIPs:
   enabled: true
 securityContext:
