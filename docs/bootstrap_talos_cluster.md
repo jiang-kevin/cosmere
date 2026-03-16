@@ -12,25 +12,32 @@ tofu apply
 kube/bootstrap/shadesmar/bootstrap-talos.sh
 ```
 
-4. After the VMs restart, run `talosctl bootstrap`
+4. Apply newt config
+
+```sh
+talosctl patch mc -p @newt-config.yaml
+talosctl get extensionserviceconfigs
+```
+
+5. After the VMs restart, run `talosctl bootstrap`
 
 ```sh
 talosctl bootstrap
 ```
 
-5. Apply Gateway API CRDs:
+6. Apply Gateway API CRDs:
 
 ```sh
 kubectl apply --server-side -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.5.0/experimental-install.yaml
 ```
 
-6. Install Cilium
+7. Install Cilium
 
 ```sh
 cilium install -f kube/bootstrap/shadesmar/cilium-values.yaml
 ```
 
-7. Install and bootstrap FluxCD
+8. Install and bootstrap FluxCD
 
 ```sh
 flux bootstrap github \

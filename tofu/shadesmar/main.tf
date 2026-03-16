@@ -29,6 +29,7 @@ resource "proxmox_virtual_environment_vm" "silverlight" {
   description = "Managed by Terraform"
   machine     = "q35"
   bios        = "ovmf"
+  boot_order = [ "virtio0", "ide2" ]
   started     = true
 
   # Always set stop_on_destroy when started = true,

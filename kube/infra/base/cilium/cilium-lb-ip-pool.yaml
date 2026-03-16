@@ -4,4 +4,5 @@ metadata:
   name: "pool"
 spec:
   blocks:
-  - cidr: "192.168.17.60/32"
+  - start: "192.168.17.10"
+  - stop: "192.168.17.12"
