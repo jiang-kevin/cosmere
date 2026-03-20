@@ -40,3 +40,5 @@ spec:
     crds:
       enabled: true
       keep: false
+    config:
+      enableGatewayAPI: true
